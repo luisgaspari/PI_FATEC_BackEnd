@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import db from './db.js'
 
 import ClienteRouter from './Routes/ClienteRoute.js'
@@ -9,6 +10,7 @@ import FornecedorRouter from './Routes/FornecedorRoute.js'
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 db.sync(() => console.log('Banco de dados preparado'))
 
@@ -20,4 +22,6 @@ app.use('/Fornecedores', FornecedorRouter)
 
 const port = process.env.PORT || 3000
 
-app.listen(3000, () => console.log('API Rodando na porta 3000'))
+app.listen(port, () => {
+    console.log('API Rodando na porta 3000!')
+})

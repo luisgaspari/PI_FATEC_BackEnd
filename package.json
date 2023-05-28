@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/LucasFelipeJesus/Projeto-PI-FATEC#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "sequelize": "^6.31.1",
     "sqlite3": "^5.1.6"
