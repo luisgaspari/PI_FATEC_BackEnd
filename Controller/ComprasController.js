@@ -81,7 +81,7 @@ class ComprasController {
                 produtoId: produto.id,
             }
             const detCompra = await DetCompra.create(newDetCompra)
-            pedidoCompra.valorTotal += detCompra.valorProduto
+            pedidoCompra.totalPedido += detCompra.valorProduto
             await pedidoCompra.save()
             return res.json(detCompra)
         } catch (err) {
