@@ -96,7 +96,7 @@ class VendasController {
                     produtoId: produto.id,
                 },
             })
-            pedidoVenda.total -= detVenda.valorProduto
+            pedidoVenda.totalPedido -= detVenda.valorProduto
             await pedidoVenda.save()
             await detVenda.destroy()
             return res.json({

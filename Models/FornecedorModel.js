@@ -11,7 +11,7 @@ const Fornecedor = db.define('fornecedor', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    cpf: {
+    cnpj: {
         type: Sequelize.STRING,
         allowNull: false,
     },

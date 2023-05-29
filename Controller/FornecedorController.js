@@ -29,7 +29,7 @@ class FornecedorController {
     static async createFornecedor(req, res) {
         const {
             nome,
-            cpf,
+            cnpj,
             telefone,
             cep,
             estado,
@@ -41,7 +41,7 @@ class FornecedorController {
         } = req.body
         if (
             !nome ||
-            !cpf ||
+            !cnpj ||
             !telefone ||
             !cep ||
             !estado ||
@@ -70,7 +70,7 @@ class FornecedorController {
 
         let {
             nome,
-            cpf,
+            cnpj,
             telefone,
             cep,
             estado,
@@ -82,7 +82,7 @@ class FornecedorController {
         } = req.body
         if (
             !nome ||
-            !cpf ||
+            !cnpj ||
             !telefone ||
             !cep ||
             !estado ||
@@ -102,7 +102,7 @@ class FornecedorController {
         const updatedFornecedor = await Fornecedor.update(
             {
                 nome,
-                cpf,
+                cnpj,
                 telefone,
                 cep,
                 estado,

@@ -100,7 +100,7 @@ class ComprasController {
                     produtoId: produto.id,
                 },
             })
-            pedidoCompra.total -= detCompra.valorProduto
+            pedidoCompra.totalPedido -= detCompra.valorProduto
             await pedidoCompra.save()
             await detCompra.destroy()
             return res.json({
