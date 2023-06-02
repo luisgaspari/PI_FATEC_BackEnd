@@ -18,7 +18,7 @@ app.use('/clientes', ClienteRouter)
 app.use('/produtos', ProdutoRouter)
 app.use('/compras', ComprasRouter)
 app.use('/vendas', VendasRouter)
-app.use('/Fornecedores', FornecedorRouter)
+app.use('/fornecedores', FornecedorRouter)
 
 const port = process.env.PORT || 3000
 
